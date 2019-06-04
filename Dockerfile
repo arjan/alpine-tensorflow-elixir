@@ -6,6 +6,8 @@ RUN pip3 install https://github.com/themech/alpine-python3-tensorflow/releases/d
 
 RUN apk del python3-dev build-base
 
+RUN apk add libstdc++
+
 # install hex + rebar
 RUN mix local.hex --force
 RUN mix local.rebar --force
